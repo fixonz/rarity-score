@@ -25,7 +25,7 @@ function Home({ title, img, description, nfts, pages, filters }) {
     >
       <Head>
         <title>{title}</title>
-        <link rel="icon" href="https://raw.githubusercontent.com/fixonz/rarity-score/refs/heads/main/pages/transparentpepe.png" /> {/* Set favicon here */}
+        <link rel="icon" href="/pages/transparentpepe.png" /> {/* Set favicon here */}
       </Head>
 
       <NextSeo
@@ -46,8 +46,7 @@ function Home({ title, img, description, nfts, pages, filters }) {
       <Navbar
         title={
           <>
-            <img
-              src="https://raw.githubusercontent.com/fixonz/rarity-score/refs/heads/main/pages/transparentpepe.png // Path to your image
+            <img src="/pages/transparentpepe.png // Path to your image
               alt="Logo"
               className="h-8 w-auto mr-2 inline" // Adjust size as needed
             />
