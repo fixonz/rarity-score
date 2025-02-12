@@ -1,15 +1,15 @@
+const { fontFamily } = require('tailwindcss/defaultTheme');
+
 module.exports = {
   mode: 'jit',
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
-  darkMode: false, // or 'media' or 'class'
-  screens: {
-    sm: '640px',
-    md: '768px',
-    lg: '1024px',
-    xl: '1280px',
-  },
+  darkMode: true, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'press-start': ['"Press Start 2P"', ...fontFamily.sans], // Add your font here
+      },
+    },
   },
   variants: {
     extend: {},
