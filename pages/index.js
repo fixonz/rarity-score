@@ -20,7 +20,7 @@ function Home({ title, img, description, nfts, pages, filters }) {
   return (
     <div
       className="flex flex-col items-center justify-center 
-    min-h-screen bg-gradient-to-r from-green-900 to-green-500 h-full"
+    min-h-screen bg-gradient-to-r from-green-900 to-green-600 h-full"
       ref={ref}
     >
       <Head>
@@ -52,9 +52,8 @@ function Home({ title, img, description, nfts, pages, filters }) {
             <img
               src="/transparentpepe1.png"
               alt="Logo"
-              className="h-8 w-auto mr-2 inline"
+              className="h-auto w-auto mr-2 inline"
             />
-            {title}
           </>
         }
         menu={true}
