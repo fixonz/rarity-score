@@ -7,7 +7,7 @@ export const Footer = () => {
     <div className="flex flex-col border-t-1 border w-full p-4 mt-4 items-center text-xs justify-center">
       <a
         className="flex items-center mb-4 text-gray-600 hover:text-gray-900"
-        href="https://twitter.com/PaiNishant"
+        href="https://x.com/Abstract_Pepes"
         target="_blank"
       >
         <span className="text-lg mr-1">
@@ -17,23 +17,23 @@ export const Footer = () => {
       </a>
       <a
         className="flex items-center mb-4 text-gray-600 hover:text-gray-900"
-        href="https://github.com/nishantrpai/rarity-score"
+        href="https://discord.gg/ZutUw5Va"
         target="_blank"
       >
         <span className="text-lg mr-1">
-          <IoLogoGithub />
+          <IoLogoDiscord />
         </span>
-        Github
+        Discord
       </a>
       <a
         className="flex items-center mb-4 text-gray-600 hover:text-gray-900"
-        href="https://etherscan.io/address/0x5a8064f8249d079f02bfb688f4aa86b6b2c65359"
+        href="https://abscan.org/address/0xc97cbba151ed084ed49a0c53b93a8f2e805c5489"
         target="_blank"
       >
         <span className="text-lg mr-1">
-          <FiCoffee />
+          <FiAbstract />
         </span>
-        Buy me coffee
+        AbscanOrg
       </a>
     </div>
   );
