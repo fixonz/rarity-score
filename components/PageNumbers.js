@@ -15,8 +15,8 @@ export const PageNumbers = (props) => {
   const manyPages = () => {
     return (
       <>
-        <a
-          className="bg-gray-200 mr-4 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-md ="
+        {/*  <a
+          className="bg-black mr-4 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-md"
           onClick={() =>
             router.push(
               `?${json2query({ ...router.query, page_id: parseInt(0) })}`
@@ -24,11 +24,12 @@ export const PageNumbers = (props) => {
           }
         >
           🏠
-        </a>
+        </a> */}
 
         {start.map((val) => (
           <a
-            className="bg-gray-200 mr-4 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-md"
+            key={val} // Added a key prop for React to efficiently update the list
+            className="bg-black mr-4 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-md"
             onClick={() =>
               router.push(
                 `?${json2query({ ...router.query, page_id: parseInt(val) })}`
@@ -39,13 +40,14 @@ export const PageNumbers = (props) => {
           </a>
         ))}
 
-        <a className="hidden sm:block mr-4 text-gray-800 font-bold py-2 px-4">
+        <span className="hidden sm:block mr-4 text-white font-bold py-2 px-4">
           ...
-        </a>
+        </span>
 
         {end.map((val) => (
           <a
-            className="hidden sm:block bg-gray-200 mr-4 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-md"
+            key={val} // Added a key prop for React to efficiently update the list
+            className="hidden sm:block bg-black mr-4 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-md"
             onClick={() =>
               router.push(
                 `?${json2query({ ...router.query, page_id: parseInt(val) })}`
@@ -62,8 +64,8 @@ export const PageNumbers = (props) => {
   const fewPages = () => {
     return (
       <>
-        <a
-          className="bg-gray-200 mr-4 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-md ="
+        {/* <a
+          className="bg-black mr-4 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-md"
           onClick={() =>
             router.push(
               `?${json2query({ ...router.query, page_id: parseInt(0) })}`
@@ -71,10 +73,11 @@ export const PageNumbers = (props) => {
           }
         >
           🏠
-        </a>
+        </a> */}
         {pageElems.map((val) => (
           <a
-            className="bg-gray-200 mr-4 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-md"
+            key={val} // Added a key prop for React to efficiently update the list
+            className="bg-black mr-4 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-md"
             onClick={() =>
               router.push(
                 `?${json2query({ ...router.query, page_id: parseInt(val) })}`
@@ -89,7 +92,7 @@ export const PageNumbers = (props) => {
   };
 
   return (
-    <div className="flex mt-8 cursor-pointer text-xs">
+    <div className="flex mt-8 cursor-pointer text-xs justify-center">
       {pageElems.length > 5 ? manyPages() : fewPages()}
     </div>
   );
