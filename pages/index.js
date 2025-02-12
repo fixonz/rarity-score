@@ -23,10 +23,14 @@ function Home({ title, img, description, nfts, pages, filters }) {
     min-h-screen bg-gradient-to-r from-green-800 to-green-100 h-full"
       ref={ref}
     >
-      <Head>
-        <title>{title}</title>
-        <link rel="icon" href="/transparentpepe.png" /> {/* Corrected path */}
-      </Head>
+<Head>
+  <title>{title}</title>
+  <link rel="icon" href="/transparentpepe.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"></link>
+</Head>
+
 
       <NextSeo
         title={title}
