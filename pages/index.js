@@ -25,7 +25,7 @@ function Home({ title, img, description, nfts, pages, filters }) {
     >
       <Head>
         <title>{title}</title>
-        <link rel="icon" href="/transparentpepe.png" />
+        <link rel="icon" href="/transparentpepe1.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true"/>
         <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" /> {/* Corrected closing tag */}
@@ -62,7 +62,7 @@ function Home({ title, img, description, nfts, pages, filters }) {
         showMenu={showMenu}
         className="font-press-start" // Apply the Tailwind class
       />
-      <main className="relative flex justify-center w-full flex-1 h-screen">
+      <main className="relative flex justify-content: flex-end w-full flex-1 h-screen">
         <SideBar
           all_traits={all_traits}
           attr_count={attr_count}
