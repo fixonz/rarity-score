@@ -10,6 +10,7 @@ import { TraitFilters } from "../components/TraitFilters";
 import { Footer } from "../components/Footer";
 import { config } from "../config";
 import { getFilters, getNFTs } from "../util/requests";
+import { FaXTwitter } from "react-icons/fa6"; // Import X (Twitter) icon
 
 function Home({ title, img, description, nfts, pages, filters }) {
   const router = useRouter();
@@ -28,7 +29,7 @@ function Home({ title, img, description, nfts, pages, filters }) {
         <link rel="icon" href="/transparentpepe.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true"/>
-        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" /> {/* Corrected closing tag */}
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
       </Head>
 
       <NextSeo
@@ -48,19 +49,28 @@ function Home({ title, img, description, nfts, pages, filters }) {
       />
       <Navbar
         title={
-          <>
-            <img
-  src="/transparentpepe1.png"
-  alt="Logo"
-  className="h-auto max-w-[25%] mr-2 inline"
-/>
-
-          </>
+          <div className="flex justify-between items-center w-full">
+            <div className="flex items-center">
+              <img
+                src="/transparentpepe1.png"
+                alt="Logo"
+                className="h-auto max-w-[25%] mr-2 inline"
+              />
+            </div>
+            <a
+              href="https://twitter.com/Abstract_Pepes"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-green-400 transition-colors duration-200"
+            >
+              <FaXTwitter size={24} />
+            </a>
+          </div>
         }
         menu={true}
         setShowMenu={setShowMenu}
         showMenu={showMenu}
-        className="font-press-start" // Apply the Tailwind class
+        className="font-press-start"
       />
       <main className="relative flex justify-content: flex-end w-full flex-1 h-screen">
         <SideBar
@@ -99,4 +109,3 @@ Home.getInitialProps = async ({ query }) => {
 };
 
 export default Home;
-
