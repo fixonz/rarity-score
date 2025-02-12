@@ -11,8 +11,8 @@ export const Footer = () => {
         target="_blank"
       >
         <span className="text-lg mr-1">
-          <IoLogoTwitter />
-        </span>
+
+          </span>
         Twitter
       </a>
       <a
