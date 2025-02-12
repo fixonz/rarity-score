@@ -93,7 +93,7 @@ function NFT({ nft, title }) {
                 href={nft?.opensea_url}
                 target="_blank"
               >
-                🛒 Opensea
+                🛒 MagicEden
               </a>
             )}
             <div className="py-4 flex flex-col items-start justify-start">
@@ -120,7 +120,7 @@ NFT.getInitialProps = async ({ query }) => {
   if (Object.keys(config.CONTRACT).length > 0)
     nft["opensea_url"] =
       config.CONTRACT.CHAIN !== "solana"
-        ? `https://opensea.io/assets/${config.CONTRACT.CHAIN}/${config.CONTRACT.ADDRESS}/${id}`
+        ? `https://magiceden.io/item-details/abstract/0xc97cbba151ed084ed49a0c53b93a8f2e805c5489/${id}`
         : "";
   if (nft) return { nft, title: config.COLLECTION_TITLE };
   else return { nft: {}, title: config.COLLECTION_TITLE };
