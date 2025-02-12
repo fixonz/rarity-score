@@ -36,7 +36,7 @@ const Trait = (attribute) => {
 
 function NFT({ nft, title }) {
   const router = useRouter();
-  const img_url = {nft.image}
+  const img_url = {nft.image};
 
   return (
     <>
