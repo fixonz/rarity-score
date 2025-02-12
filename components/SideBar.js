@@ -13,7 +13,7 @@ export const SideBar = (props) => {
     <div
       className={`absolute sm:relative ${
         !showMenu ? "hidden" : "flex"
-      } sm:flex flex-col border-r-2 border-gray-200 h-screen overflow-auto w-full sm:w-64 bg-black`}
+      } sm:flex flex-col border-r-2 border-gray-200 min-h-screen w-full sm:w-64 bg-black`}
     >
       <div className="flex-grow flex flex-col justify-start">
         <Search {...router.query} setShowMenu={setShowMenu} />
