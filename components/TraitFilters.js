@@ -21,12 +21,12 @@ export const TraitFilters = () => {
   return (
     <div className="flex flex-wrap mt-4 mb-4">
       {traits.length > 0 && (
-        <div className="max-w-max	flex justify-center items-center m-1 font-medium py-1 pr-2 bg-white text-gray-500">
+        <div className="max-w-max	flex justify-center items-center m-1 font-medium py-1 pr-2 bg-black text-gray-500">
           <span className="text-xs">Filters:</span>
         </div>
       )}
       {traits.map((trait) => (
-        <div className="max-w-max	flex justify-center items-center m-1 font-medium py-1 px-2 bg-white rounded-full text-indigo-700 bg-indigo-200">
+        <div className="max-w-max	flex justify-center items-center m-1 font-medium py-1 px-2 bg-black rounded-full text-indigo-700 bg-indigo-200">
           <span className="text-xs flex justify-center items-center">
             <b>{trait.split(":")[0].toLocaleUpperCase()}</b>:{" "}
             {trait.split(":")[1]}
@@ -42,7 +42,7 @@ export const TraitFilters = () => {
         </div>
       ))}
       {attr_count && (
-        <div className="max-w-max	flex justify-center items-center m-1 font-medium py-1 px-2 bg-white rounded-full text-indigo-100 bg-indigo-700 border border-indigo-700">
+        <div className="max-w-max	flex justify-center items-center m-1 font-medium py-1 px-2 bg-black rounded-full text-indigo-100 bg-indigo-700 border border-indigo-700">
           <span className="text-xs">Attr Count: {attr_count}</span>
           <span
             className="cursor-pointer hover:text-indigo-200"
