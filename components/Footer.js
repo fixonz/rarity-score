@@ -21,7 +21,7 @@ export const Footer = () => {
         target="_blank"
       >
         <span className="text-lg mr-1">
-          <IoLogoDiscord />
+          
         </span>
         Discord
       </a>
@@ -31,9 +31,9 @@ export const Footer = () => {
         target="_blank"
       >
         <span className="text-lg mr-1">
-          <FiAbstract />
+
         </span>
-        AbscanOrg
+        AbSCAN
       </a>
     </div>
   );
