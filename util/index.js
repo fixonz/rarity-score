@@ -9,9 +9,9 @@ export const getDesc = (nft) => {
   let desc;
   desc = `
   🔷ID: ${nft.id}
-  
+
   🔷Rarity score: ${nft.rarity_score.toFixed(2)}
-  
+
   🔷Rarity rank: ${nft.rarity_rank + 1}
   `;
   return desc;
@@ -34,4 +34,20 @@ export const formatPrice = (price) => {
   // wei = 10^18
   if (price !== "-") return (price / 10 ** 18).toFixed(2);
   else return "-";
+};
+
+/**
+ * Extracts the image URL directly from an NFT object.
+ * Assumes the NFT object has a structure where the image URL is located at `nft.image`.
+ *
+ * @param {object} nft The NFT object.
+ * @returns {string | null} The image URL, or null if not found.
+ */
+export const getImageUrlFromNft = (nft) => {
+  if (nft && nft.image) {
+    return nft.image;
+  } else {
+    console.warn("No image URL found in NFT object:", nft);
+    return null;
+  }
 };
