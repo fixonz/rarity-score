@@ -5,7 +5,7 @@ export const config = {
   COLLECTION_NAME: "Abstract PEPES",
   COLLECTION_TITLE: "Abstract PEPES",
   COLLECTION_DESCRIPTION: '2,222 collectible PEPE characters representing the NFT culture on Abstract chain.',
-  COLLECTION_IMG_LINK: "https://pbs.twimg.com/profile_banners/1870283865727602689/1734893502/1500x500",
+  COLLECTION_IMG_LINK: "https://pbs.twimg.com/profile_banners/1870283865727602689/1734893502/1500x500.jpg",
   CONTRACT: {
     // if you're not sure, set CONTRACT: {}, will remove opensea link
     CHAIN: "abstract", //possible values of ethereum, matic (polygin), klatyn, solana
