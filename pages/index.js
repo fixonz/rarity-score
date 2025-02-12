@@ -50,10 +50,10 @@ function Home({ title, img, description, nfts, pages, filters }) {
         title={
           <>
             <img
-              src="/transparentpepe1.png"
-              alt="Logo"
-              className="h-auto w-auto mr-2 inline"
-            />
+  src="/transparentpepe1.png"
+  alt="Logo"
+  className="h-5 w-5 mr-2 inline" // Adjust h-5 w-5 as needed
+/>
           </>
         }
         menu={true}
