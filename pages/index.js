@@ -25,7 +25,7 @@ function Home({ title, img, description, nfts, pages, filters }) {
     >
       <Head>
         <title>{title}</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/transparentpepe.png" /> {/* Set favicon here */}
       </Head>
 
       <NextSeo
@@ -44,10 +44,20 @@ function Home({ title, img, description, nfts, pages, filters }) {
         description={description}
       />
       <Navbar
-        title={title}
+        title={
+          <>
+            <img
+              src="/transparentpepe.png" // Path to your image
+              alt="Logo"
+              className="h-8 w-auto mr-2 inline" // Adjust size as needed
+            />
+            {title}
+          </>
+        }
         menu={true}
         setShowMenu={setShowMenu}
         showMenu={showMenu}
+        style={{fontFamily: 'YourPixelatedFont, sans-serif'}} //Pixelated font
       />
       <main className="relative flex justify-center w-full flex-1 h-screen">
         <SideBar
