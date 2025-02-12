@@ -1,7 +1,7 @@
 export const config = {
   env: "prod",
   LOCAL_API_URL: "localhost:3000",
-  API_URL: "rarity-score-blush.vercel.app",
+  API_URL: "abstractpepes.vercel.app",
   COLLECTION_NAME: "Abstract Pepes",
   COLLECTION_TITLE: "",
   COLLECTION_DESCRIPTION: '2,222 collectible PEPE characters representing the NFT culture on Abstract chain.',
