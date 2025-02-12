@@ -11,9 +11,9 @@ export const SideBar = (props) => {
 
   return (
     <div
-      className={`absolute sm:relative ${
+      className={`fixed top-0 left-0 sm:relative ${
         !showMenu ? "hidden" : "block"
-      } sm:block border-r-2 border-gray-200	 h-50 max-h-screen overflow-auto max-w-full sm:max-w-xs w-full bg-black`}
+      } sm:block border-r-2 border-gray-200 h-screen overflow-auto w-full sm:w-64 bg-black z-50`}
     >
       <Search {...router.query} setShowMenu={setShowMenu} />
       <Tools {...router.query} setShowMenu={setShowMenu} />
