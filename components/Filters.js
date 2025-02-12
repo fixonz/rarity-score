@@ -54,7 +54,7 @@ export const Filters = (props) => {
                     })
                     .map((val) => (
                       <a
-                        className={`bg-white cursor-pointer hover:bg-gray-300 hover:text-gray-900 rounded-md text-gray-700 py-2 px-2 ml-2 flex`}
+                        className={`bg-black cursor-pointer hover:bg-gray-300 hover:text-gray-900 rounded-md text-gray-700 py-2 px-2 ml-2 flex`}
                         onClick={() => handleChange(filter, val)}
                       >
                         {val} ({allTraits[filter]["attributes"][val].count})
