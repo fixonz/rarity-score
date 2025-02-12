@@ -25,7 +25,7 @@ function Home({ title, img, description, nfts, pages, filters }) {
     >
       <Head>
         <title>{title}</title>
-        <link rel="icon" href="/transparentpepe.png" /> {/* Set favicon here */}
+        <link rel="icon" href="https://raw.githubusercontent.com/fixonz/rarity-score/refs/heads/main/pages/transparentpepe.png" /> {/* Set favicon here */}
       </Head>
 
       <NextSeo
@@ -47,7 +47,7 @@ function Home({ title, img, description, nfts, pages, filters }) {
         title={
           <>
             <img
-              src="/transparentpepe.png" // Path to your image
+              src="https://raw.githubusercontent.com/fixonz/rarity-score/refs/heads/main/pages/transparentpepe.png // Path to your image
               alt="Logo"
               className="h-8 w-auto mr-2 inline" // Adjust size as needed
             />
@@ -57,7 +57,7 @@ function Home({ title, img, description, nfts, pages, filters }) {
         menu={true}
         setShowMenu={setShowMenu}
         showMenu={showMenu}
-        style={{fontFamily: 'YourPixelatedFont, sans-serif'}} //Pixelated font
+      style={{fontFamily: '"Press Start 2P", monospace'}} //Pixelated font
       />
       <main className="relative flex justify-center w-full flex-1 h-screen">
         <SideBar
