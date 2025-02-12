@@ -20,17 +20,16 @@ function Home({ title, img, description, nfts, pages, filters }) {
   return (
     <div
       className="flex flex-col items-center justify-center 
-    min-h-screen bg-gradient-to-r from-green-800 to-green-100 h-full"
+    min-h-screen bg-gradient-to-r from-green-900 to-green-500 h-full"
       ref={ref}
     >
-<Head>
-  <title>{title}</title>
-  <link rel="icon" href="/transparentpepe.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"></link>
-</Head>
-
+      <Head>
+        <title>{title}</title>
+        <link rel="icon" href="/transparentpepe.png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true"/>
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" /> {/* Corrected closing tag */}
+      </Head>
 
       <NextSeo
         title={title}
@@ -51,9 +50,9 @@ function Home({ title, img, description, nfts, pages, filters }) {
         title={
           <>
             <img
-              src="/transparentpepe.png" // Corrected path
+              src="/transparentpepe.png"
               alt="Logo"
-              className="h-8 w-auto mr-2 inline" // Adjust size as needed
+              className="h-8 w-auto mr-2 inline"
             />
             {title}
           </>
@@ -61,7 +60,7 @@ function Home({ title, img, description, nfts, pages, filters }) {
         menu={true}
         setShowMenu={setShowMenu}
         showMenu={showMenu}
-      style={{fontFamily: '"Press Start 2P", monospace'}} //Pixelated font
+        className="font-press-start" // Apply the Tailwind class
       />
       <main className="relative flex justify-center w-full flex-1 h-screen">
         <SideBar
@@ -100,3 +99,4 @@ Home.getInitialProps = async ({ query }) => {
 };
 
 export default Home;
+
