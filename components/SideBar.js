@@ -12,13 +12,15 @@ export const SideBar = (props) => {
   return (
     <div
       className={`absolute sm:relative ${
-        !showMenu ? "hidden" : "block"
-      } sm:block border-r-2 border-gray-200	 h-50 max-h-screen overflow-auto max-w-full sm:max-w-xs w-full bg-black`}
+        !showMenu ? "hidden" : "flex"
+      } sm:flex flex-col border-r-2 border-gray-200 h-screen overflow-auto w-full sm:w-64 bg-black`}
     >
-      <Search {...router.query} setShowMenu={setShowMenu} />
-      <Tools {...router.query} setShowMenu={setShowMenu} />
-      <Filters allTraits={all_traits} setShowMenu={setShowMenu} />
-      <AttrFilter attrCount={attr_count} setShowMenu={setShowMenu} />
+      <div className="flex-grow flex flex-col justify-start">
+        <Search {...router.query} setShowMenu={setShowMenu} />
+        <Tools {...router.query} setShowMenu={setShowMenu} />
+        <Filters allTraits={all_traits} setShowMenu={setShowMenu} />
+        <AttrFilter attrCount={attr_count} setShowMenu={setShowMenu} />
+      </div>
     </div>
   );
 };
