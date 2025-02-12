@@ -2,14 +2,14 @@ export const config = {
   env: "prod",
   LOCAL_API_URL: "localhost:3000",
   API_URL: "odp-rarity.vercel.app",
-  COLLECTION_NAME: "OneDayPunks",
-  COLLECTION_TITLE: "One Day Punks",
-  COLLECTION_DESCRIPTION: '10k "One Day I\'ll Be A Punk"-punks.',
-  COLLECTION_IMG_LINK: "https://punkscape.xyz/og.png",
+  COLLECTION_NAME: "Abstract PEPES",
+  COLLECTION_TITLE: "Abstract PEPES",
+  COLLECTION_DESCRIPTION: '2,222 collectible PEPE characters representing the NFT culture on Abstract chain.',
+  COLLECTION_IMG_LINK: "https://pbs.twimg.com/profile_banners/1870283865727602689/1734893502/1500x500",
   CONTRACT: {
     // if you're not sure, set CONTRACT: {}, will remove opensea link
-    CHAIN: "ethereum", //possible values of ethereum, matic (polygin), klatyn, solana
-    ADDRESS: "0x5537d90a4a2dc9d9b37bab49b490cf67d4c54e91", //note: for solana these values change, so currently not supported
+    CHAIN: "abstract", //possible values of ethereum, matic (polygin), klatyn, solana
+    ADDRESS: "0xc97CBBa151Ed084ed49A0C53b93A8f2e805c5489", //note: for solana these values change, so currently not supported
   },
   WEIGHTS: {},
 };
