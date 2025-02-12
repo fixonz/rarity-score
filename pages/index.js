@@ -25,7 +25,7 @@ function Home({ title, img, description, nfts, pages, filters }) {
     >
       <Head>
         <title>{title}</title>
-        <link rel="icon" href="/transparentpepe1.png" />
+        <link rel="icon" href="/transparentpepe.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true"/>
         <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" /> {/* Corrected closing tag */}
@@ -50,7 +50,7 @@ function Home({ title, img, description, nfts, pages, filters }) {
         title={
           <>
             <img
-              src="/transparentpepe.png"
+              src="/transparentpepe1.png"
               alt="Logo"
               className="h-8 w-auto mr-2 inline"
             />
