@@ -20,12 +20,12 @@ function Home({ title, img, description, nfts, pages, filters }) {
   return (
     <div
       className="flex flex-col items-center justify-center 
-    min-h-screen bg-gradient-to-r from-rose-50 to-rose-100 h-full"
+    min-h-screen bg-gradient-to-r from-black to-gray-100 h-full"
       ref={ref}
     >
       <Head>
         <title>{title}</title>
-        <link rel="icon" href="/pages/transparentpepe.png" /> {/* Set favicon here */}
+        <link rel="icon" href="./transparentpepe.png" /> {/* Set favicon here */}
       </Head>
 
       <NextSeo
@@ -46,7 +46,7 @@ function Home({ title, img, description, nfts, pages, filters }) {
       <Navbar
         title={
           <>
-            <img src="/pages/transparentpepe.png // Path to your image
+            <img src="./transparentpepe.png" // Path to your image
               alt="Logo"
               className="h-8 w-auto mr-2 inline" // Adjust size as needed
             />
