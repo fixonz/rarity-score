@@ -16,9 +16,9 @@ const Trait = (attribute) => {
         </span>
       </div>
       <div className="relative flex justify-between items-center w-full text-xs text-gray-600 mt-1 py-2">
-        <span className="bg-gray-50 rounded-md absolute z-0 h-8 w-full"></span>
+        <span className="bg-black rounded-md absolute z-0 h-8 w-full"></span>
         <span
-          className="bg-gray-100 rounded-l-lg absolute z-10 h-8"
+          className="bg-black rounded-l-lg absolute z-10 h-8"
           style={{ width: `${(attribute.percentile * 100).toFixed(1)}%` }}
         ></span>
         <div className="z-50 flex justify-between w-full px-2">
@@ -42,7 +42,7 @@ function NFT({ nft, title }) {
     <>
       <div
         className="flex flex-col items-center justify-center 
-      min-h-screen bg-gray-100"
+      min-h-screen bg-black-100"
       >
         <NextSeo
           title={nft?.name}
@@ -61,7 +61,7 @@ function NFT({ nft, title }) {
         <Navbar title={title} />
         <div className="flex mb-4 items-start w-full cursor-pointer">
           <a
-            className="text-2xl py-4 px-4 rounded-md bg-gray-200 text-gray-700 hover:text-gray-900 m-4"
+            className="text-2xl py-4 px-4 rounded-md bg-black-200 text-gray-700 hover:text-gray-900 m-4"
             onClick={() => router.back()}
           >
             <FiArrowLeft />
@@ -72,7 +72,7 @@ function NFT({ nft, title }) {
           className="flex flex-col items-center justify-center 
         w-full flex-1 p-2 rounded-lg text-center mb-8 max-w-xl"
         >
-          <div className="justify-center p-4 shadow-xl rounded-md bg-white w-full">
+          <div className="justify-center p-4 shadow-xl rounded-md bg-black w-full">
             <h3 className="text-3xl font-semibold mb-4">{nft?.name}</h3>
             <div className="relative rounded-md bg-black w-full">
               <img className="rounded-md" src={img_url} />
