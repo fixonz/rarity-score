@@ -18,7 +18,7 @@ export const NFT = (nft) => {
         />
         <span
           className="absolute top-1 right-1 // Position the rank badge
-              text-white px-0.6 py-0.6 font-medium text-[0.55rem] rounded-md bg-yellow-100/85 text-yellow-500"
+              text-white px-0.6 py-0.6 font-medium text-[0.55rem] rounded-md bg-yellow-100/65 text-yellow-500"
         >
           #{nft.rarity_rank + 1}
         </span>
