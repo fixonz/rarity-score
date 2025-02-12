@@ -1,34 +1,26 @@
-import React, { useState } from "react";
+import React from "react";
+import { useRouter } from "next/router";
+import { Tools } from "./Tools";
+import { Filters } from "./Filters";
+import { AttrFilter } from "./AttrFilter";
+import { Search } from "./Search";
 
-export const AttrFilter = ({ attrCount, setShowMenu }) => {
-  const [expandedTrait, setExpandedTrait] = useState(null); // Track the expanded trait type
-
-  const toggleTrait = (traitType) => {
-    setExpandedTrait((prevTrait) => (prevTrait === traitType ? null : traitType)); // Toggle the expanded trait
-  };
+export const SideBar = (props) => {
+  const router = useRouter();
+  const { all_traits, attr_count, showMenu, setShowMenu } = props;
 
   return (
-    <div className="p-4">
-      <h2 className="text-white text-lg font-bold mb-2">Attributes</h2>
-      {Object.entries(attrCount).map(([traitType, values]) => (
-        <div key={traitType} className="mb-4">
-          <div
-            className="text-gray-300 hover:text-white cursor-pointer"
-            onClick={() => toggleTrait(traitType)} // Toggle the trait when clicked
-          >
-            {traitType}
-          </div>
-          {expandedTrait === traitType && ( // Conditionally render trait values
-            <ul className="ml-4">
-              {Object.entries(values).map(([value, count]) => (
-                <li key={value} className="text-gray-500 hover:text-gray-300">
-                  {value} ({count})
-                </li>
-              ))}
-            </ul>
-          )}
-        </div>
-      ))}
+    <div
+      className={`absolute sm:relative ${
+        !showMenu ? "hidden" : "flex"
+      } sm:flex flex-col border-r-2 border-gray-200 min-h-screen w-full sm:w-64 bg-black`}
+    >
+      <div className="flex-grow flex flex-col justify-start">
+        <Search {...router.query} setShowMenu={setShowMenu} />
+        <Tools {...router.query} setShowMenu={setShowMenu} />
+        <Filters allTraits={all_traits} setShowMenu={setShowMenu} />
+        <AttrFilter attrCount={attr_count} setShowMenu={setShowMenu} />
+      </div>
     </div>
   );
 };
