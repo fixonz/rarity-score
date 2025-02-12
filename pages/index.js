@@ -52,8 +52,9 @@ function Home({ title, img, description, nfts, pages, filters }) {
             <img
   src="/transparentpepe1.png"
   alt="Logo"
-  className="h-5 w-5 mr-2 inline" // Adjust h-5 w-5 as needed
+  className="h-auto max-w-[25%] mr-2 inline"
 />
+
           </>
         }
         menu={true}
