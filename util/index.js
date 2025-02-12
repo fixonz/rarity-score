@@ -17,26 +17,9 @@ export const getDesc = (nft) => {
   return desc;
 };
 
-export const ipfs2http = (ipfs_url) => {
-  if (ipfs_url) {
-    return ipfs_url.replace("ipfs://", "");
-  } else {
-    return "";
-  }
-};
-
-export const formatIpfsUrl = (image_url) => {
-  if (image_url) {
-    let img_url = new URL(
-      image_url.includes("http") || image_url.includes("ipfs")
-        ? image_url
-        : `${basePath}${image_url}`
-    );
-    if (img_url.protocol.includes("ipfs")) {
-      img_url = `https://ipfs.io/ipfs/${ipfs2http(image_url)}`;
-    }
-    return img_url;
-  }
+export const formatIpfsUrl = (id) => {
+  const cid = "bafybeihrefxhkjnvdngg6o2slxafratgloxlsv3dl4xdhupd3sgprcnkuy";
+  return `https://gateway.pinata.cloud/ipfs/${cid}/${id}.json`;
 };
 
 export const fetcher = (url) => fetch(url).then((r) => r.json());
